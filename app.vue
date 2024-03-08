@@ -16,21 +16,24 @@ import defaultExport from 'lattice-lottery-plus'
 const { SlotMachine } = defaultExport
 
 import 'lattice-lottery-plus/lib/lattice-lottery.css'
+import img1 from '~/assets/images/1.jpg'
+import img2 from '~/assets/images/2.jpg'
+import img3 from '~/assets/images/3.jpg'
 
 let machine = ref(null)
 
 const list = ref([
   {
     name: "1",
-    image: '/images/1.jpg'
+    image: img1
   },
   {
     name: "2",
-    image: '/images/2.jpg'
+    image: img2
   },
   {
     name: "3",
-    image: '/images/3.jpg'
+    image: img3
   }
 ])
 
