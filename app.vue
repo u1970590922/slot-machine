@@ -1,12 +1,23 @@
 <template>
-  <slot-machine
-      class="myMachine"
-      :colCount="3"
-      :moveTime="8"
-      :list="list"
-      ref="machine"
-    />
-    <button @click="machineGo">抽</button>
+  <div class="container">
+    <div class="card text-center mt-4">
+      <div class="card-header">
+        抽獎
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center">
+          <slot-machine
+            class="myMachine"
+            :colCount="3"
+            :moveTime="8"
+            :list="list"
+            ref="machine"
+          />
+        </div>
+        <button type="button" class="btn btn-primary btn-sm mt-4" @click="machineGo">開始</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -52,23 +63,19 @@ const machineGo = () => {
 <style>
   /* 宽度大小 */
   .myMachine {
-    width: 600px;
+    width: 1000px;
   }
   /* 老虎机格子的样式 */
   .slotMachine__col {
-    height: 88px;
+    height: 250px;
   }
   /* 奖品item的样式 */
   .slotMachine__li {
-    height: 88px;
+    height: 250px;
   }
   /* 图片样式 */
   .slotMachine__image {
-    width: 120px;
-    height: 120px;
-  }
-  /* 文字样式 */
-  .slotMachine__label {
-    color: red;
+    width: 350px;
+    height: 350px;
   }
 </style>

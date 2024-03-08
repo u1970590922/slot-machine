@@ -4,5 +4,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? '/slot-machine/' : '/',
     buildAssetsDir: '/static/'
-  }
+  },
+  css: ["bootstrap/dist/css/bootstrap.min.css"]
 })
